@@ -81,4 +81,4 @@ sed -i -r "s/server.flareSolverrTimeout = ([0-9]+|[a-zA-Z]+)( #)?/server.flareSo
 sed -i -r "s/server.flareSolverrSessionName = \"(.*?)\"( #)?/server.flareSolverrSessionName = \"${FLARESOLVERR_SESSION_NAME:-\1}\" #/" /home/suwayomi/.local/share/Tachidesk/server.conf
 sed -i -r "s/server.flareSolverrSessionTtl = ([0-9]+|[a-zA-Z]+)( #)?/server.flareSolverrSessionTtl = ${FLARESOLVERR_SESSION_TTL:-\1} #/" /home/suwayomi/.local/share/Tachidesk/server.conf
 
-exec java -Duser.home=/home/suwayomi -Xbootclasspath/a:"/home/suwayomi/startup/chinese-utils-1.0.jar" -jar "/home/suwayomi/startup/tachidesk_latest.jar";
+exec java -Duser.home=/home/suwayomi -Xbootclasspath/a:"/home/suwayomi/chinese-utils-1.0.jar" -jar "/home/suwayomi/startup/tachidesk_latest.jar";
