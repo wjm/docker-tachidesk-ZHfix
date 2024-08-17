@@ -44,6 +44,7 @@ WORKDIR /home/suwayomi
 RUN curl -s --create-dirs -L $TACHIDESK_RELEASE_DOWNLOAD_URL -o /home/suwayomi/startup/tachidesk_latest.jar
 COPY scripts/create_server_conf.sh /home/suwayomi/create_server_conf.sh
 COPY scripts/startup_script.sh /home/suwayomi/startup_script.sh
+COPY scripts/chinese-utils-1.0.jar /home/suwayomi/chinese-utils-1.0.jar
 
 # update permissions of files.
 # we grant o+rwx because we need to allow non default UIDs (eg via docker run ... --user)
