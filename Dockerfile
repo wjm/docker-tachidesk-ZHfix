@@ -1,4 +1,4 @@
-FROM eclipse-temurin:11-jre-jammy
+FROM eclipse-temurin:21.0.7_6-jre-noble
 
 ARG BUILD_DATE
 ARG TACHIDESK_RELEASE_TAG
@@ -34,6 +34,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Create a user to run as
+RUN userdel -r ubuntu
 RUN groupadd --gid 1000 suwayomi && \
     useradd  --uid 1000 --gid suwayomi --no-log-init suwayomi && \
     mkdir -p /home/suwayomi/.local/share/Tachidesk
